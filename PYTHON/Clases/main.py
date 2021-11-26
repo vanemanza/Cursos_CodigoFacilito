@@ -68,7 +68,7 @@ print(user2.__dict__)
 
 class Usuario:
     # Object
-    # el metodo init se llama cuando el objeto es instanciado
+    # el metodo init es llamado cuando el objeto es instanciado
     def __init__(self, username='', password=''): # puedo usar parametros x default
         self.username = username
         self.password = password
