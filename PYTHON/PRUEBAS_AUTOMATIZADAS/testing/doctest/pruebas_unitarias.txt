@@ -1,0 +1,35 @@
+
+Unit test: pruebas automatizadas para verificar el funcionamiento
+de una unidad de código.
+
+Una unidad es la parte más pequeña testeable de una aplicación.
+(depende del paradigma en el q estemos trabajando, puede ser una 
+una rutina, una función o un método.)
+
+Funcion--> Testear el código.
+
+Por ej:
+
+Tenemos 3 funciones, cada una funciona una sola tarea y cada una es 
+independiente, o sea q no depende de las otras para su correcto funcionamiento.
+Por eso podemos decir q cada una de ellas son UNIDADES.
+
+def pormedio(*args):
+    return sum(args)/len(args)
+
+def aprobatorio(promedio, minimo=70):
+    return promedio >= minimo
+
+def mensaje(aprobatorio=True):
+    return "Felicidades" if aprobatorio else "Desaprobaste"
+
+ventajas:
+* Una de las ventajas de implementar pruebas unitarias, es la posibilidad
+de dividir el código en unidades q nos permitan encontrar los bugs
+de una forma mas facil.
+
+*documentar el código.
+
+*una prueba no depende de las otras
+
+
