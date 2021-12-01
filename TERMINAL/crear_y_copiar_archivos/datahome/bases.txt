@@ -1,0 +1,20 @@
+ls --> listar los archivos
+ls -a --> muestra los archivos ocultos
+(l muestra los usuarios y permisos)
+ls -la --> combina los archivos ocultos con los usuarios y permisos
+los archivos q tienen un . adelante son archivos ocultos
+con respecto a los permisos:
+los q tengan una d son directorios o carpetas
+
+pwd : nos muestra la ruta absoluta donde nos encontramos
+$ pwd
+/c/Users/usuario/Cursos_CodigoFacilito
+(env)
+
+cd : cambio de directorio 
+
+con tab termina de escribir
+
+cd solo nos manda al home donde iniciamos la sesion
+
+clear - limpiar la terminal

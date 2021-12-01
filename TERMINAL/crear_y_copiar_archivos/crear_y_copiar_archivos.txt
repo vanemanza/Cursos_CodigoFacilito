@@ -1,0 +1,16 @@
+mkdir : make directory ( crear directorio)
+
+crear un archivo vacio: touch/nombre/extencion del archivo
+
+copiar con cp: cp nombre_archivo
+
+estando en la misma carpeta: cp archivo carpeta ( copio el archivo tal cual)
+
+copiar en otra carpeta: cp archivo carpeta
+copiar y renombrar: cp archivo carpeta/nuevonombre
+
+
+
+
+
+
