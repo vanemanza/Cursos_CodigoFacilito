@@ -1,0 +1,30 @@
+ejecutar comandos como superusuarios o root   
+para cambiar a root usamos el comando su -- (super user)
+nos pide la contraseña, para configurarla 
+debo ejecutar el comando sudo (super user do ) sudo passwd
+
+la contraseña con la q iniciamos sesion en el so 
+
+una vez configurada la contraseña de super usuario, puedo 
+ejecutar el comando su y cuando me pide la contraseña 
+escribo la de antes.
+me va a aparecer root o #
+indica q ya nos encontramos como super usuarios
+sirve para ejecutar algun comando global
+o darle permisos a algun archivo o carpeta
+
+para salir uso exit()
+nos crea una sesion diferente
+
+cuando ejecutamos el comando sudo y nos pide la contraseña
+tambien la podemos modificar ; passwd
+
+y podems cambiar la contraseña para este usuario
+
+reboot : reiniciar el so
+
+sudo reboot + contraseña
+
+sudo halt : detener o apagar nuestra computadora
+ó
+sudo init 0

@@ -1,0 +1,8 @@
+nano abre un editor de texto, 
+creo el archivo
+guardo con ctrl o 
+salgo con ctrl x  
+--------------------------------------------------------
+
+para ver el contenido de los archivos --> cat data.txt
+

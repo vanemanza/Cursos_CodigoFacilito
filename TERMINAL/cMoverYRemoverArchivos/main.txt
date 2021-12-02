@@ -1,0 +1,26 @@
+
+COPIAR:
+Para copiar una carpeta, tener en cuenta si tiene o no archivos.
+
+Para eso se utiliza la bandera -r (recursivo)
+que copia ese elemento y los q contiene
+
+cp -r carpeta_origen carpeta_destino
+--------------------------------------------------------
+
+MOVER:
+mv archivo carpeta_destino
+
+--------------------------------------------------------
+
+REMOVER ARCHIVOS:
+rm archivo 
+se recomienda hacerlo desde la misma carpeta
+--------------------------------------------------------
+
+ELIMINAR CARPETA:
+rm ruta_absoluta/archivo_a_eliminar ( no es lo mas recomendable)
+rm -r carpeta
+
+
+
