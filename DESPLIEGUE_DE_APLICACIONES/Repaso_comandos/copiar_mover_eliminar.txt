@@ -1,9 +1,19 @@
 comandos para:
 
 1) copiar archivos -> cp archivo ruta_destino
+            cp archivo ruta_destino nuevo_nombre
 
 2) mover archivos -> mv archivo directorio-destino
 
-3) renombrar archivos
+3) renombrar archivos --> mv archivo_a_renombrar nuevo_nombre
 
-4) eliminar archivos
+4) eliminar archivos --> rm (remove)
+                        rm archivo
+    el archivo se elimina de forma permanente
+    (no se almacena en papelera)
+
+    eliminar carpeta --> rm -r (recursiva) 
+                        rm -rf ( f: todos los q se encuentren dentro del directorio)
+                        rm -rf carpeta_a_eliminar
+
+
