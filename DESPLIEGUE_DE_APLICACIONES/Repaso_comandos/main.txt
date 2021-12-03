@@ -1,2 +1,97 @@
-probando lo aprendido :)
+uso correcto de la terminal 
+comandos basicos en Unix
+
+FILE SISTEM: 
+directoio raiz o root --> /
+DIRECTORIOS:
+ARCHIVOS:
+
+pwd : en q directorio estamos actualmente
+ls : conocer el contenido de un directorio
+cd : change directory - movernos dentro de DIRECTORIOS
+cd .. --> subimos un directorio ( al directorio padre)
+
+root : bin   dev  home  lib    lib64   lost+found  mnt  proc  run   snap  sys  usr
+boot  etc  init  lib32  libx32  media       opt  root  sbin  srv   tmp  var
+
+clear o ctrl+L : limpia la terminal
+
+mkdir crear una carpeta
+
+crear archivos:
+1* echo "mensaje en consola", tomar la salida y almacenarla con > nombre_archivo
+2* touch nombre_archivo
+3* usar un editor de texto: 1) bin
+                            2) nano : nano archivo
+
+conocer el contenido de un archivo:
+*cat
+
+HEAD Y TAIL:
+head archivo
+head -n <numero> <archivo> 
+tail archivo -> podemos obtener los ultimos logs del sistema
+cuando estamos administrando servidores remotos.
+muestra 10 lineas 
+
+WC - WORD COUNT
+lineas palabras caracteres archivo
+  1       2         13     echo.txt
+los espacios son contados como caracter  
+wc -m archivo : solo cantidad de caracteres
+wc -c archivo: cantidad de bits  
+wc -w archivo : cantidad de palabras
+wc -l archivo : cantidad de lineas
+
+LS: CONTENIDO DE TODO UN DIRECTORIO
+ficheros ocultos: ls -a
+. directorio actual
+.. directorio padre
+-l detalles de cada archivo
+
+perimisos cantidad de ref propietario  grupo     tamaño   fechaUltimModf horaUltimMod nombre_archivo
+rw-r--r--     1            vanemanza  vanemanza    15 Dec  2 17:15 echo.txt
+-rw-r--r-- 1 vanemanza vanemanza 12814 Dec  2 17:02 frankenstein.txt
+-rw-r--r-- 1 vanemanza vanemanza    30 Dec  2 16:20 nano.txt
+-rw-r--r-- 1 vanemanza vanemanza     0 Dec  2 16:18 touch.txt
+-rw-r--r-- 1 vanemanza vanemanza    28 Dec  2 16:19 touxh.txt
+
+ls -lr ( reverse) los ordena alfabeticamente de forma descendente
+ls -lt (x ultima fecha de modificacion)
+x su extencion --> ls -ltX
+--> ls -ltXr ( a la inversa)
+
+con respecto al tamaño de los archivos:
+(expresado en bits)
+ls -lS (orden descendente del mas pesado al mas liviano)
+ls -lSr al reves
+
+expresar el peso de los archivos en kilobits
+ls -lSrh 
+
+* Wildcarts:
+simbolo o caracter especial para representar a otros caracter
+
+* representa una o multiples ocurrencias de caracteres
+ls *.<extencion>
+ls  archivo.*   
+
+? unicamente una coincidencia
+ls *.?? ( para obtener todos los archivos q tengan dos caracteres en su extension)
+ls ????.* ( todos los q tengan 4 caracteres x nombre)
+
+[] agrupar una o multiples coincidencia
+ls [u]*.* (todos los q comienzan cn u y cualquier extension)
+ls [nt]*.* (todos los q empiecen con n o t)
+ls [nt]*[no].* (los q empiecen con n o t y terminen 
+con n u o) y cualquier extension.
+ls [nt]*.?? ( los q empiecen con n o t y tengan dos caracteres
+en la extension)
+
+COMANDO MAN:
+Acceder a la doc o manual de c/u de los comandos q podemos ejecutar
+en el sistema.
+man ls (listar el contenido de un directorio)
+man mkdir
+man man 
 

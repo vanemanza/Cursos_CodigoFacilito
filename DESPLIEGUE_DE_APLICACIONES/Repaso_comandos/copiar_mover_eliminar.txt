@@ -1,0 +1,9 @@
+comandos para:
+
+1) copiar archivos -> cp archivo ruta_destino
+
+2) mover archivos -> mv archivo directorio-destino
+
+3) renombrar archivos
+
+4) eliminar archivos
