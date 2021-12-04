@@ -1,1 +1,75 @@
-e
+
+REDIRIGIR LA SALIDA DE LOS PROGRAMAS:
+1) PARA EL CANAL Stdout Y Stderr:
+( indica q todos los mensajes q se encuentren en el canal, 
+automaticamente serán redirigidos al archivo indicado.)
+    comando a ejecutar  >  archivo 
+    echo "Hola Mundo"   > stdout.txt
+- puedo modificar el contenido sobreescribiendo el mismo
+    comando con otro str.
+
+- si quiero agregar contenido y mantener el anterior:
+        comando            >>  archivo
+    echo "nuevo contenido" >> stdout.txt
+
+- el stderr tambien se puede redirigir :
+comando      tipo de stream>      archivo
+ls stdout.py      2>           stderr.txt    
+(si intento listar un archivo q no existe, me dará un error,
+y la salida se encuentra en el canal stderr, la podemos redirigir
+a un archivo donde podremos almacenar esas salidas. )
+
+si quiero extender el contenido del archivo en vez de reemplazarlo:
+utilizo dos >>
+ls stdout.py 2>> stderr.txt
+
+- Podemos redirigir en conjunto el stdout y el stderr:
+
+vamos a almacenar la salida de strout.txt en el archivo 
+stdout.txt y almacenar la salida del stderr en el archivo
+stderr.txt-->
+ls stdout.txt > sdtout.txt 2> sdterr.txt
+ò
+ls stdout.txt 1> sdtout.txt 2> sdterr.txt 
+--------------------------------------------------------
+
+Redirigir el stdin:
+
+es el canal x el q el usuario puede ingresar x teclado, 
+diferentes datos en la ejecucion de un programa. 
+
+En Unix es posible, usar un archivo para pasar los valores a 
+un programa usando stdin. 
+
+1) vamos a crear un archivo
+2) dentro vamos a almacenar los diferentes valores que 
+queremos enviar en la ejecucion del programa a traves
+del stdin. 
+
+1- creo el programa --> nano main.py
+2- creo dos input donde pido q el usuario ingrese nombre 
+y edad y los guardo en variables.
+3- imprimir los valores en consola.
+4- almacenar
+5- ejecutar ( python3 main.py)
+6- creo un archivo donde almacenar: nano stdin.txt
+dentro del archivo guardo, separados x un salto de linea,
+todos los valores q quiero enviar en la ejecucion del programa
+nombre
+edad
+guardo-
+
+7- para q podamos usar el contenido de un archivo en el stdin
+vamos a usar el operador <
+>>> python3 main.py < stdin.txt
+al ejecutar confirmo q los valores dentro del archivo se 
+usan dentro del stdin.
+Puedo modificar el contenido del archivo y se va a modificar 
+la salida de la ejecucion.
+
+
+
+
+
+
+

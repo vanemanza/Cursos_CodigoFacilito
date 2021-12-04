@@ -17,8 +17,4 @@ una salida:
     2) Stdout: (Tipo 1) devuelve un mensaje de éxito de ejecución.
     3) Stderr: (Tipo 2)  mensajes de error.
 
-
-
-
-
-
+------------------------------------------------------
