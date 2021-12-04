@@ -1,0 +1,31 @@
+r -> lectura
+w -> escritura
+x -> ejecucion
+
+para ver q permiso tiene un fichero 
+uso ls -l:
+
+file_atribute: 10 caracteres
+1) tipo
+2) perimisos 
+
+propietarios --> user
+             --> group
+             --> other
+
+modificar permisos:
+1)representacion de numero octal
+2) representacion simbolica
+
+octal  binario    permisos
+0       000         ---
+1       001         --x
+2       010         -w-
+3       011         -rwx
+4       100         r--
+5       101         r-x
+6       110         rw-
+7       111         rwx
+
+comando--> chmod 777 main.py
+

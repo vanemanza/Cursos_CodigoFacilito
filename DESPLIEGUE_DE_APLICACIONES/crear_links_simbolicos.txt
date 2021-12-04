@@ -1,0 +1,24 @@
+para crear un link simbólico --> tipo especial de archivo q hace referencia a otro archivo.
+uso el comando ln  
+bandera -s ( link sibolico)
+archivo del cual quiero generar el link 
+directorio donde lo quiero almacenar
+
+ln -s archivo directorio
+
+si me sale permiso denegado uso sudo
+
+sudo ln -s archivo directorio 
+
+si ingreso al directorio debería ver:
+el link(por lo general los nodos se pintan 
+de colores distintos segun el tipo
+doc blanco
+carpetas azul
+links rojo)
+
+tambien podemos ver el tipo con ls -l  
+en permisos la primera letra dice el tipo
+d carpetas
+l link
+- archivos
