@@ -53,3 +53,16 @@ se encuentra el patron)
 (tambien podemos buscar sentencias completas usando "")
 
 con man podemos ver mas opciones del comando!
+-------------------------------------------------------
+
+CONOCER EL CONTEXTO DONDE SE ENCUENTRA UN PATRON:
+Para hacerlo puedo obtener una cantidad determinada 
+de lineas antes y despues de donde se encuentra el 
+patron.
+
+>>>grep -nA 5 "He saw his" frankenstein.txt
+
+-n -> linea donde se encuentra
+A -> After + numero de lineas 
+B -> Before + numero de lineas
+C -> Antes y despues 
