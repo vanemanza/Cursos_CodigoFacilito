@@ -1,0 +1,31 @@
+es un entorno especial creado para la ejecucion de un programa.
+dentro tiene todo lo q el programa necesita para funcionar.
+o podria decirse q es una instancia de un programa.
+
+en Unix tienen 4 atributos q permiten gestionarlos:
+PIT - identificador unico, de hasta 5 numeros enteros
+PPIT - identificador q hace referencia al proceso padre
+TTY - terminal a la cual esta asociada un proceso, pero no todos los procesos pueden ser creados desde una terminal
+UID - usuario creador del proceso
+
+init process - (PID1)
+el primer proceso q se ejecuta cuando el sistema cuando el sistema comienza
+a partir de este todos los demas pueden crearse
+
+comandos para conocer los procesos activos:
+ps -> listado de todos los procesos activos cuando el comando esta en ejecucion para mi usuario 
+ps -f -> mas info (UID, PID, PPID, etc)
+ps -u -> ++ info (performance? USER, %CPU %MEM, VSZ=cantidad de memoria virtual, RSS= cantidad de memoria, ambas en K, STAT=estado, etc)
+
+con man ps puedo ver mas comandos
+---------------------------------------------------
+
+comando TOP:
+para monitorear los principales procesos activos dentro del sistema
+y se actualiza en tiempo real 
+se sale con la tecla Q
+PID
+USER
+%CPU
+%MEM
+
