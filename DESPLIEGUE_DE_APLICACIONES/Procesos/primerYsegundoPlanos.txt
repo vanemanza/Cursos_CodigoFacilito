@@ -1,0 +1,48 @@
+* Crear procesos en PRIMER PLANO:
+
+x default cada proceso q se crea en terminal
+se ejecuta en primer plano y puede interactuar
+con el programa, ingresar datos y esperar una posible
+salida en consola.
+
+x ejemplo: cuando pedimos al usuario info x input,
+y luego imprimimos la respuesta.
+
+para ejecutar este programa y crear un proceso en 
+PRIMER PLANO, solo debemos ejecutar el programa como 
+siempre, x ejemplo mediante un interprete.
+>>> python main.py
+
+La ventaja de poder crear procesos en primer plano, 
+es q podemos interactuar con los programas, ya sea 
+ingresando datos o esperando una salida en consola.
+
+La desventaja es q no podemos ejecutar otros comandos 
+hasta q el programa finalice.
+
+---------------------------------------------------
+
+* crear procesos en SEGUNDO PLANO:
+
+Para q podamos ejecutar programas y poder crear procesos
+en SEGUNDO PLANO, solo colocamos & al final del comando, esto 
+le indica q se va a ejecutar en segundo plano.
+Voy a visualizar el ID del proceso.
+Para conocer los procesos activos del usuario uso el
+comando ps y corroboro q se está ejecutando en 2do. 
+plano.
+
+La ventaja es q puedo seguir utilizando la terminal, y 
+seguir ejecutando otros comandos en terminal.
+
+----------------------------------------------------
+
+JOBS:
+
+Si quiero traer de regreso un programa, tengo q conocer  
+los JOBS activos con el comando --> jobs 
+
+me aparece un listado con los procesos activos y me muestra
+el ID.
+Con el comando fg %ID y lo traigo de nuevo al primer plano. 
+ 
