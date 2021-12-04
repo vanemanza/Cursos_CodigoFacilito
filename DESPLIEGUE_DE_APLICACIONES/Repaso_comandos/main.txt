@@ -19,7 +19,7 @@ clear o ctrl+L : limpia la terminal
 mkdir crear una carpeta
 
 crear archivos:
-1* echo "mensaje en consola", tomar la salida y almacenarla con > nombre_archivo
+1* echo "imprime mensaje en consola", tomar la salida y almacenarla con > nombre_archivo
 2* touch nombre_archivo
 3* usar un editor de texto: 1) bin
                             2) nano : nano archivo
