@@ -1,0 +1,24 @@
+Cuando creamos un nuevo proceso, se inicializa con 
+tres canales de datos:  -> Stdin
+                        -> Stdout
+                        -> Stderr
+
+Se los conoce como Streams, y sirven para q el usuario
+pueda interactuar con la ejecución del programa, enviando
+o recibiendo información.
+
+1) Stdin: Tipo 0
+mediante este canal el usuario puede enviar diferentes
+datos al programa. Estos datos se envian mediante el teclado
+si el programa se encuentra en ejecución. 
+
+Cuando el programa recibe y procesa los datos, da x resultado
+una salida:
+    2) Stdout: (Tipo 1) devuelve un mensaje de éxito de ejecución.
+    3) Stderr: (Tipo 2)  mensajes de error.
+
+
+
+
+
+
