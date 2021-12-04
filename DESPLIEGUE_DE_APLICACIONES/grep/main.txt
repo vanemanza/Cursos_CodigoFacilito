@@ -66,3 +66,12 @@ patron.
 A -> After + numero de lineas 
 B -> Before + numero de lineas
 C -> Antes y despues 
+
+--------------------------------------------------
+
+BUSCAR MULTIPLES PATRONES SOBRE UN MISMO ARCHIVO:
+
+con la opcion -e 
+
+>>>grep -wine sea -wine passage -wine "he saw his" frankenstein.txt
+
