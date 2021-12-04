@@ -1,0 +1,55 @@
+Global REgular Expresion Print?
+
+Nos permite buscar patrones sobre los distintos archivos del sistema.
+La mayoria de los os no cuentan con interfaz grafica, x lo 
+que se dificulta la  busqueda de texto en los archivos q queremos
+administrar.
+
+cat (explorar el archivo)
+
+estructura base:
+grep <opcion/opciones> <patron> <archivo>
+
+>>>grep and frankenstein.txt
+<devuelve todas las lineas donde se encuentre el patron, 
+remarcado de color rojo, solo o dentro de palabras>
+
+>>>grep -w and frankenstein.txt
+<con -w le indico q solo voy a buscar palabras>
+
+>>>grep -w my frankenstein.txt    
+(x default busca los caracteres de forma exacta)
+
+>>>grep -wi MY frankenstein.txt   
+(-i es para q no distinga entre may y minus) 
+
+>>>grep -win my frankenstein.txt    
+(-n numero de linea donde se encuentra el patron)
+
+>>>grep -c my frankenstein.txt    
+(-c solo la cantidad de lineas donde se encuentra el patron)
+
+>>>grep -wic My frankenstein.txt  
+(esta opcion busca la palabra sin importar si está en mayuscula o 
+minusc, me devuelve la cantidad de lineas donde se encuentra el patron. ) 
+
+>>>grep -wiv my frankenstein.txt    
+(-v si queremos conocer las lineas donde NO se encuentre el 
+patron)
+
+>>>grep -wivn my frankenstein.txt    
+(-v si queremos conocer el número de linea de las lineas donde NO se encuentre el 
+patron)
+
+>>>grep -wivnm 10 my frankenstein.txt    
+(-v si queremos conocer una cantidad de lineas determinadas donde NO exista
+el patron)
+
+>>>grep -winm 10 my frankenstein.txt    
+(-v si queremos conocer las primeras 10 lineas donde SI 
+se encuentra el patron)
+
+>>>grep "he is" my frankenstein.txt    
+(tambien podemos buscar sentencias completas usando "")
+
+con man podemos ver mas opciones del comando!
