@@ -1,0 +1,9 @@
+Para finalizar un proceso: usando SIGNALS
+
+1) en PRIMER PLANO: uso Ctrl + C 
+
+2) en SEGUNDO PLANO: uso el comando KILL
+- kill -9 <ID> 
+
+Los signals de kill son 64, para conocerlos:
+kill -l     
