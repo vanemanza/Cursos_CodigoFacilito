@@ -1,0 +1,13 @@
+Es un proceso del sistema que inicia en segundo plano, junto con el sistema operativo.
+Permite programar cuando ejecutar procesos en intervalos de tiempo determinados.
+
+Trabaja con una estructura de 6 apartados, los primeros 5 refieren a tiempo:
+
+* * * * * comando a ejecutar
+| | | | |_ dia de la semana de 0 a 6 o sun/mon/ etc 
+| | | |___ mes del año del 1 al 12 l jan/feb/ etc  
+| | |_____ dia del mes del 1 al 31
+| |_______ hora del dia de 0 a 23
+|_________ minuto del dia del 0 al 59
+
+
