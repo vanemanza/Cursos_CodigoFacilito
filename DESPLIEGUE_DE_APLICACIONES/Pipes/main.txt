@@ -1,0 +1,8 @@
+Un Pipe es una forma q nos permite tomar el stdout de un proceso y usarlo como stdin de otro proceso.
+
+Podemos ejecutar de forma secuencial multiples procesos, x ej:
+se ejecuta de forma secuencial de izq a der.
+usamos el caracter pipe |
+
+comando1              | comando2    | comando3
+tail frankenstein.txt | grep -w he  |    wc
