@@ -1,0 +1,13 @@
+con el comando crontab -e podemos editar el archivos crontab
+se abre el editor nano y debajo de las lineas comentadas
+escribimos el comando a ejecutar, previamente definimos el 
+periodo de tiempo.
+
+* * * * * echo "Hola, nos encontramos en el archivo crontab"
+
+vamos a tomar la salida del programa, y almacenarla en un 
+archivo.txt
+
+* * * * * echo "Hola, nos encontramos en el archivo crontab" >> /home/vanemanza/archivos/crontab.txt
+
+asi le indico q se ejecute cada minuto todo el dia
