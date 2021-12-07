@@ -8,3 +8,6 @@ class Persona(models.Model):
     email = models.EmailField()
     info = models.TextField()    
     foto = models.ImageField(upload_to="mascota_perdida", null=True, blank=True )
+
+    def __str__(self):
+        return self.nombre

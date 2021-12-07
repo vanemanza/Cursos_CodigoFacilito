@@ -5,6 +5,9 @@ from adopcion.models import Persona
 class Vacuna(models.Model):
     nombre = models.CharField(max_length=50)
 
+    def __str__(self):
+        return self.nombre
+
 class Mascota(models.Model):
 
     nombre = models.CharField(max_length=50)
@@ -14,3 +17,6 @@ class Mascota(models.Model):
     foto = models.ImageField(upload_to="mascota", null=True, blank=True )
     persona = models.ForeignKey(Persona, null=True,blank=True, on_delete=models.CASCADE)
     vacuna = models.ManyToManyField(Vacuna)
+
+    def __str__(self):
+        return self.nombre

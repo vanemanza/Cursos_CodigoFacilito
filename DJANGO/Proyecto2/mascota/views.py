@@ -13,7 +13,7 @@ def mascota(request):
         form = MascotaForm(request.POST)
         if form.is_valid():
             form.save()
-        return redirect('mascota:index')    
+        return redirect('index')    
     else:
         form = MascotaForm()   
 
