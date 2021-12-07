@@ -124,6 +124,12 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR/ 'static'
 
+#url publica de img
+MEDIA_URL = '/media/'
+
+# ruta para buscar multimedia
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
