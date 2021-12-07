@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
-
+from .models import Mascota
 from .forms import MascotaForm
+
 #from django.http import HttpResponse
 
 # Create your views here.
@@ -19,3 +20,7 @@ def mascota(request):
 
     return render(request, 'mascota/mascota_form.html', {'form': form})    
 
+def listado(request):
+    mascotas = Mascota.objects.all()
+    contexto = {'mascotas': mascotas}
+    return render(request, 'mascota/mascota_list.html', contexto)

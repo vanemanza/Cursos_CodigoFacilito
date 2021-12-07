@@ -13,9 +13,7 @@ class MascotaForm(forms.ModelForm):
             'nombre': 'Nombre',
             'sexo': 'Sexo',
             'edad_aproximada': 'Edad aproximada',
-            'fecha_rescate': 'Fecha de rescate',
-            'persona': 'Adoptante',
-            'vacuna': 'Vacunas',
+            'fecha_rescate': 'Fecha de rescate',                
             'foto': 'Foto',
         }
 
@@ -23,9 +21,7 @@ class MascotaForm(forms.ModelForm):
             'nombre': forms.TextInput(attrs={'class': 'form-control'}),
             'sexo': forms.TextInput(attrs={'class': 'form-control'}),
             'edad_aproximada': forms.TextInput(attrs={'class': 'form-control'}),
-            'fecha_rescate': forms.TextInput(attrs={'class': 'form-control'}),
-            'persona': forms.Select(attrs={'class': 'form-control'}),
-            'vacuna': forms.CheckboxSelectMultiple(),
+            'fecha_rescate': forms.TextInput(attrs={'class': 'form-control'}),          
             'foto': forms.FileInput(),
         }
         
