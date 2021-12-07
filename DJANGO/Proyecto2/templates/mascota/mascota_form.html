@@ -1,12 +1,19 @@
 {% extends 'base/base.html' %}
 
     {% block title %}
-   formulario alta
+    formulario alta
     {% endblock %} 
    
     {% block content %}
-    <h5>este es el formulario para registrar mascotas</h5>
+    <form action="", method="post">
+       {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">Guardar</button>
+    </form>
     {% endblock %} 
+
+
+    <br>
     {% block footer %}
     <h5>este es el footer del formulario</h5>
     {% endblock %} 

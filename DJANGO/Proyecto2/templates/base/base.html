@@ -10,6 +10,7 @@
     <title>{% block title %}documento{% endblock %}</title>
 </head>
 <body>
+    <div class="container">
     {% block header %}
     {% include 'base/navbar.html' %}
     {% endblock %} 
@@ -19,6 +20,7 @@
     {% block footer %}
     <h5>este es el footer</h5>
     {% endblock %} 
+    </div>
 
     {% block extrajs %}{% endblock %}
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
