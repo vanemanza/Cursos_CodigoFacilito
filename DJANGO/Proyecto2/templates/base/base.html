@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block extrahead %}{% endblock %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}documento{% endblock %}</title>
+</head>
+<body>
+    {% block header %}
+    <h4>este es el bloque header base</h4>
+    {% endblock %} 
+    {% block content %}
+    <h5>este es el contenido del archivo base</h5>
+    {% endblock %} 
+    {% block footer %}
+    <h5>este es el footer</h5>
+    {% endblock %} 
+
+    {% block extrajs %}{% endblock %}
+</body>
+</html>
