@@ -1,0 +1,13 @@
+Protocolo de administración q nos permite conectarnos y administrar servidores remotos.
+
+Usa el modelo CLIENTE-servidores
+Se basa en 3 principios:
+- autenticación
+- cifrado 
+- integridad de los datos
+
+EStructura:
+
+ssh <usuario>@<ip del servidor> -p <22>
+                                 |   |__   x default trabaja con el puerto 22 pero se puede modificar
+                                 |______    define el puerto
