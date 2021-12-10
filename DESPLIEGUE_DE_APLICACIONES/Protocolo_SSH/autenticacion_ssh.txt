@@ -1,0 +1,50 @@
+el uso de contraseña para autenticarnos no es muy seguro, 
+la mejor manera es x llaves SSH
+
+Para confirmar si ya tenemos alguna llave SSH y evitar conflictos:
+1) me situo en el directorio raiz :
+	$ cd ~
+2) listar todos los archivos incluidos los ocultos
+	ls -a
+3) ingresamos en la carpeta .ssh:
+	cd .ssh
+4) listar de nuevo archivos ocultos para ver si hay llaves:
+	ls -a
+
+------------------------------------------------------------------
+
+Una vez confirmado q no tenemos llaves creadas, generamos un nuevo
+juego de llaves:
+
+	ssh-keygen -t rsa -b 4096
+		    |	   |_____ define la longitud del cifrado
+		    |____________ define el algoritmo a utilizar	
+
+confirmar con enter el directorio donde queremos almacenar la llave
+enter para guardar una frase vacia dos veces y aparecerá la imagen de nuestra llave
+
+si consultamos con ls ahora aparecerán una llave publica y otra privada
+
+Asi la llave se encuentra en local, para enviarla al servidor:
+para q el servidor sepa q queremos registrarnos con un usuario registrado:
+
+1) ssh-copy-id <nombre usuario>@<direccion ip>
+
+para confirmar q salio todo ok, autenticarse con el usuario registrado
+
+una vez autenticado, le debo indicar al servidor q desde ahora todas las conexiones
+se haran mediante llave y no passwd:
+
+sudo nano /etc/ssh/sshd_config
+
+ingresar la clave para ese usuario, e ingresaremos al archivo para poder configurar 
+el servidor:
+buscar la opcion PasswordAuthentication y cambiar yes por no
+luego reiniciar el servicio de ssh:
+	sudo service ssh restart
+	exit ( para salir del servidor remoto )
+y si intentamos autenticarnos nuevamente no deberiamos tener q poner password.
+
+
+
+
