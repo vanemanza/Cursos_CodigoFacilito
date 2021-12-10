@@ -1,0 +1,27 @@
+despues de generar mis llaves ssh publica y privada
+y enviarlas al servidor remoto
+podemos autenticarnos x llave ssh sin contraseña
+
+Si estamos administrando muchos servidores remotos es complicado 
+aprender todos los usuarios e ip
+x eso configuraremos nuestro cliente SSH para q se conecte al servidor 
+remoto x un ALIAS.
+
+1) IR AL DIRECTORIO RAIZ--> cd ~
+2) luego lista ls -a e ingresar a cd .ssh
+3) aqui estan los juegos de llaves
+4) crear el archivo config
+	sudo nano config
+5) dentro definimos todos los servidores con los cuales
+queremos autenticarnos:
+
+Host <alias para nuestro servidor>
+Hostname <direccion ip>
+User <usuario>
+PubKeyAuthentication yes
+IdentityFile ~/.ssh/id_rsa
+
+Una vez guardados los cambios, salgo e intento autenticarme con mi nuevo ALIAS
+
+ssh <alias>
+
