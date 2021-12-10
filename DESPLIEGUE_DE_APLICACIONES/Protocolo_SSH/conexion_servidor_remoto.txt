@@ -1,0 +1,21 @@
+EN EL SERVIDOR:
+
+1) autenticarnos en el servidor ( x ej Digital Ocean)
+2) crear -> droplets 
+3) elegir una imagen ( x ej Ubuntu)
+4) elegir un plan ( x ej basic)
+5) ir hasta Autenticación (la primera vez elegir x Password) ¡¡¡ NO OLVIDAR !!!
+6) crear droplet y copiar la dirección IP
+7) autenticarnos con el servidor usando SSH --->
+
+EN LA TERMINAL:
+
+1) autenticarnos:
+    ssh root@<direccion ip> (opcional -p 22)
+          |____________________________________ como es la primera vez, solo tiene un usuario (root)
+2) confirmar q SI queremos continuar con la conexion ( la primera vez)
+3) ingresar la contraseña del usuario root ( la que creamos con el droplet)
+        si todo salió OK tendriamos q estar conectados al servidor remoto. 
+        con el comando whoami verifico el usuario
+        con ip r conocemos la direccion ip de este servidor
+        con exit salgo del servidor y cierro la conexion
