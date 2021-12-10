@@ -1,0 +1,28 @@
+COMO enviar archivos desde local al serv remoto:
+usando scp
+
+1) crear la carpeta destino en el serv remoto:
+accedo al serv remoto con ssh <alias>
+mkdir <directorio nuevo>
+ingreso y verifico q es una carpeta vacia
+copio la direccion
+regreso a local
+
+2) voy al directorio donde estan los archivos q quiero enviar
+$ scp <archivo local> <User>@<ip>:<directorio remoto>
+x ej:
+scp stderr.txt vanesa@159.89.48.169:/home/user/archivos
+o puedo reemplazar el usuario@ip x el alias:
+scp stderr.txt deploy1:/home/user/archivos
+
+salida ok:
+stderr.txt		100% 	57	24.7KB/s	00:00
+
+para insepeccionar voy al servidor: ssh deploy1
+ingreso al archivo
+listo ls
+y deberia aparecer el archivo
+hago un cat sobre el archivo para verificar
+con exit vuelvo a local
+
+
