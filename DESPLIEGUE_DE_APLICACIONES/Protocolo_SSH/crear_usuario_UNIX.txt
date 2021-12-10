@@ -1,0 +1,30 @@
+Cuando administramos servidores remotos es mejor usar un no root user
+Para crear un nuevo usuario:
+1) autenticarnos en el servidor
+	ssh root@<direccion ip>
+	password
+2) una vez autenticados, crear el nuevo usuario:
+	adduser <nombre nuevo usuario>
+	password nueva
+	repetir
+	full name
+	number
+	phone
+	home
+	etc
+3) agregar el nuevo usuario al grupo de administradores:
+	usermod -aG sudo <nuevo usuario>
+4) cambiar de usuario:
+	su <nombre usuario>
+5) consultar usuario:
+	whoami
+6) para regresar a root:
+	exit
+7) salir del servidor remoto:
+	exit
+	  |___ vamos a local!
+8) ya en local, para confirmar si el usuario se creo de 
+forma exitosa, nos autenticamos con el:
+		ssh <nuevo usuario>@<direccion ip>
+		password
+			
