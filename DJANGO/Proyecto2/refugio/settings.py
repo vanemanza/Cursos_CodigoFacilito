@@ -81,8 +81,8 @@ DATABASES = {
         'NAME': 'refugio',
         'USER': 'vane',
         'PASSWORD': 'vane',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'HOST': 'localhost',
+        'PORT': '',
 
     }
 }
