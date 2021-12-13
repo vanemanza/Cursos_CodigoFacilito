@@ -1,0 +1,22 @@
+Tmux es un multiplexor de terminales, nos permite tener multiples ventanas abiertas para una sesion en la terminal.
+Nos permite ejecutar y monitorear multiples ventanas y procesos en una sola sesion, algo muy util si estamos
+conectados con servidores remotos via SSH, o si tenemos q realizar multiples tareas en la terminal.
+
+* INSTALACION:
+sudo apt install tmux
+
+* VERIFICAR LA VERSION:
+tmux -V
+
+* EJECUTAR EL PROGRAMA:
+tmux
+
+con tmux podemos usar todos los comandos unix
+pero usando un prefijo o shortcut --> ctrl+v
+
+x ej para ver la hora en pantalla: ctrl + b t
+
+* SALIR:
+exit
+
+

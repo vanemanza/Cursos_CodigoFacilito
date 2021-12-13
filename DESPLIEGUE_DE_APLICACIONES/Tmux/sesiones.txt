@@ -1,0 +1,41 @@
+A partir de las sesiones podemos almacenar las configuraciones q realizamos para las ventanas y
+los paneles. 
+Cada ventana le pertenece a una sesion, una sesion puede poseer multiples ventanas.
+
+Para conocer las sesiones activas ejecutamos:
+tmux ls
+
+las sesiones se nombran mediante un numero entero, comenzando x 0
+<numero de sesion> : <cantidad de ventanas> <fecha de creacion> (attached) -> sesion actual
+
+para renombrar la sesion uso el comando $
+rename-session: main
+vuelvo a listar y verifico q ya cambió el nombre
+
+para salir de la sesion y regresar a la terminal pero
+ manteniendo las config de sesiones, nombres, etc
+ejecutar prefijo + d -> nos permite regresar a la terminal 
+pero sin finalizar la sesion, que queda activa  con todas sus config
+
+para volver a tmux se va a crear x default una nueva sesion
+podemos listar las activas (tmux ls)
+y veremos la nueva  y la anterior
+
+movernos entre sesiones usamos parentesis de apertura o cierre:
+prefijo + ) 
+regreso con prefijo + ( 
+
+tambien podemos movernos usando prefijo + s 
+nos devuelve un listado con las sesiones activas y podemos movernos entre sesiones
+
+ELIMINAR UNA SESION (con todas sus ventanas y paneles)
+tmux kill-session -t <nombre de sesion>
+me devuelve a la terminal
+
+podemos crear una sesion con un nombre predefinido:
+tmux new -s <nombre sesion>
+tmux ls
+exit
+
+para ingresar a un sesion q se encuentra adjunta
+tmux attach-session -t <nombre de la sesion>

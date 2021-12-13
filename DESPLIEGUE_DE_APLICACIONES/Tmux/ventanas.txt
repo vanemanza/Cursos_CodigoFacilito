@@ -1,0 +1,25 @@
+Una ventana puede tener multiples paneles, 
+pero tambien podemos tener multiples ventanas.
+
+* CREAR NUEVA VENTANA:
+
+prefijo + c
+Puedo visualizar todas las ventanas creadas en la barra inferior.
+
+La ventana activa se muestra con un *
+
+* MOVERNOS ENTRE VENTANAS:
+- x su posicion:
+prefijo + posicion --> ctrl + b 2
+- con las teclas:
+prefijo + n (next)
+prefijo + p (previous)
+- comando f nos permite buscar la ventana q necesito de un listado
+de ventanas activas y sus paneles.
+prefijo + f enter
+el * marca la ventana activa
+
+* NOMBRAR LAS VENTANAS:
+prefijo + ,
+habilita el prompt y ahi podemos nombre la ventana
+

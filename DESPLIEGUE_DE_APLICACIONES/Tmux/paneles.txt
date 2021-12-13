@@ -1,0 +1,31 @@
+Paneles:
+sirven para ejecutar y administrar distintas tareas en la terminal.
+
+Por default cuando entramos a tmux se abre una ventana y un panel, dentro del que
+podemos ejecutar los comando q necesitemos.
+
+Para crear un nuevo panel puedo usar " o % y se divide la ventana en un panel sup y otro
+inferior
+
+Para saber en q panel nos encontramos tenemos q tener la linea verde activa
+
+Para crear un nuevo panel lateral puedo usar  % 
+
+Para conocer la posicion de los paneles ejecutamos: ctrl + b q y veremos el numero en pantalla 
+empezando x el 0
+
+Para movernos entre paneles:
+1) prefijo ( ctrl + b) con las teclas flechas
+2) ctrl + b o (te lleva al siguiente)
+
+Para eliminar un panel: exit
+
+Redimensionar:
+1) prefijo + teclas direccionales 
+2) ingresar al prompt con ctrl b :
+-:resize-pane -<direccio> <cantidad>
+
+Up: resize-pane -U 10
+Down: resize-pane -D 10
+Left: resize-pane -L 10
+Right: resize-pane -R 10 
