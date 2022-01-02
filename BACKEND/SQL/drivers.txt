@@ -1,0 +1,15 @@
+Drivers de conexión
+Cuando vamos a trabajar con algún motor de bases de datos, existe una brecha entre nuestro programa y nuestro entorno de ejecución, y el motor de bases de datos. Esta brecha se cierra utilizando un Driver.
+
+Este driver es el que nos permite comunicarnos con el motor de base de datos, internamente estos programas, librerías o dependencias como quieras llamarlos, implementan los protocolos de comunicación necesarios para ejecutar operaciones sobre la base de datos.
+
+Por supuesto cada motor de base de datos tiene necesidades distintas, por lo que el funcionamiento interno de cada driver depende de con qué base de datos estamos buscando comunicarnos.
+
+Estos drivers a su vez exponen una API, es decir una serie de métodos, objetos y funciones con los que nos podemos comunicar con la base de datos.
+
+Cuando busques una librería que haga este trabajo debes de buscar considerando el lenguaje de programación o entorno de ejecución y el motor de base de datos. Por ejemplo, driver para Go y mySQL, o driver para Python y Postgres, etc.
+
+En el caso de nuestro conjunto de tecnologías, necesitamos algo que nos permita comunicar NodeJS con Sqlite, precisamente hay una dependencia para eso en NPM que se llama sqlite3, así que procedamos a configurarla.
+
+instalar con npm install sqlite3
+

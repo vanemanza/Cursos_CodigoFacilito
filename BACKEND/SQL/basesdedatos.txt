@@ -1,0 +1,5 @@
+base de datos(son los datos en si, puede ser un excel x ej)
+
+motores de bases de datos(sirven para leer, modificar etc las bases de datos)
+
+lenguaje de bases de datos(sql)

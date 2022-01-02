@@ -1,0 +1,41 @@
+Como crear mi primer servidor web:
+
+1) crear una nueva carpeta para mi proyecto:
+
+curso_backend
+
+2) posicionar la terminal sobre la carpeta
+
+(una forma de hacerlo es arrastrar la carpeta a la terminal)
+
+3) iniciar con npm
+
+npm init
+dejar valores x defecto con enter
+
+esto genera un archivo package.json dentro de la carpeta del proy
+podemos vermo en vsc
+
+4) crear el primer servidor web
+con la libreria http
+5) crear un archivos server.js
+
+en el archivo escribir:
+const http = require('http');
+
+function responderPeticion(request, response){
+  response.end('Hola mundo');
+}
+
+let server = http.createServer(responderPeticion);
+
+
+server.listen(3000);
+
+ejecutar el codigo:
+en la terminal, ejecutar
+nodejs server.js
+
+voy a un navegador y escribo localhost:3000
+
+

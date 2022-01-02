@@ -1,0 +1,13 @@
+nos permite crear peticiones http usando una interfaz grafica
+
+descargar la app de la pagina
+
+abrir la app
+
+crear manualmente
+
+elegir get - localhost 
+
+
+click en send -> veremos el mensaje en postman en vez del navegador
+

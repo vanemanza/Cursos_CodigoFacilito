@@ -1,0 +1,19 @@
+HTTP significa PROTOCOLO de TRANSFERENCIA de HIPERTEXTO
+
+es el protocolo con el q funciona la web
+
+La base del protocolo:
+1) el cliente realiza una peticion
+2) el servidor recibe la peticion, la lee y la interpreta
+3) el servidor envia una respuesta
+
+La peticion esta formada x un cuerpo de datos ( html, css, js, imagenes,
+ videos, etc) , una serie de encabezados y el verbo HTTP
+La respuesta tambien esta formada x encabezados, el cuerpo de datos, etc
+
+Una caracteristica del protocolo es q es STATELESS (o sea no conserva un
+estado) o sea q cada peticion es independiente.
+
+
+
+

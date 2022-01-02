@@ -1,0 +1,22 @@
+verificar version -> curl --version
+si no esta, instalar con 
+sudo apt install curl
+
+una peticion http se compone de los siguientes elementos:
+1) un método http
+2) la version del protocolo a usar
+3) la ruta a la que realizaremos la peticion
+4) opcional un cuerpo de datos a enviar al servidor
+
+---------------------------------------------------------------
+
+Para hacer una peticion a un servidor:
+1)curl <direccion web> <enter>
+
+Lo que recibimos es un doc HTML q el servidor envia como respuesta
+a la peticion HTTP q enviamos.
+
+  curl <direccion> --verbose --> agrega mas información a la 
+respuesta
+
+

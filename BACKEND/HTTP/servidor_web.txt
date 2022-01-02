@@ -1,0 +1,27 @@
+SERVIDOR WEB:
+
+Puede referirse a la computadora(hardware) donde se encuentra nuestro código o bien
+al código mismo(software) que responde a las peticiones que vienen del navegador.
+
+CLIENTE:
+
+Se refiere al programa o dispositivo usado para acceder a una página web 
+( x ej un navegador web)
+
+CLIENTE y SERVIDOR se comunican usando un protocolo HTTP
+
+APLICACION SERVIDOR WEB:
+Una aplicación web puede servir como servidor!
+Contiene un servidor HTTP, es decir una forma de responder a las
+peticiones que vienen de algun cliente (normalmente un navegador)
+
+SERVIDOR WEB HARDWARE:
+es una computadora que tiene una aplicacion web servidor que pueda 
+responder al protocolo HTTP, especializada para recibir estas peticiones
+a traves de puertos de la red.
+El protocolo HTTP utiliza el puerto 80 y el 443 para conectar un
+cliente con un servidor web.
+
+Además tiene otras caracteristicas técnicas especiales como PROCESADORES 
+y DISCOS DUROS muy rápidos.
+

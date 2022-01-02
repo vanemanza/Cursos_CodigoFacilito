@@ -1,0 +1,21 @@
+El backend usa:
+1) un lenguaje de programación para PROGRAMAR un SERVIDOR WEB, por
+lo general con la ayuda de un framework que nos permita comunicarnos via HTTP 
+con un cliente ( x lo general un navegador) 
+2) un motor de BASES DE DATOS, donde almacenamos la información para poder
+consultar luego, ( x ej POSTGRES, ,MONGO DB, MYSQL, etc)
+3) tecnologias para subir tu plataforma a tu servidor de forma automatizada, 
+SERVIDORES WEB especializados, como NGINX o APACHE, 
+4) BASES DE DATOS DINAMICAS, etc
+
+------------------------------------------------------------------------------
+
+PRIMEROS PASOS:
+* instalar NODE js:  sudo apt install node
+
+* instalar npm: sudo apt install npm (node package manager?)
+
+verificar las versiones con node --version y npm --version
+
+
+

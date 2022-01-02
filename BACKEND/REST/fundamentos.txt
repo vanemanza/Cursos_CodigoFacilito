@@ -1,0 +1,22 @@
+Arquitectura para definir como nos comunicamos con el servidor desde el cliente.
+
+REST:
+REpresentational
+State
+Transfer
+
+
+Existen 6 limitantes q un sistema rest debe respetar:
+1) la arquitectura cliente/servidor
+2) que sea stateless: cada peticion debe ser independiente, la info 
+viene en cada peticion y no almacena info innecesaria
+3) cacheability: algunas respuestas pueden ser almacenadas en cache.
+4) que el sistema pueda estar basado en capas: el serv debe estar compuesto
+por distintas capas y cada una se encarga de cosas distintas.
+Una capa debe ser independiente, solo debe comunicarse cn las capas adyacente
+5) que posean un interfaz uniforme:junto con stateless son las mas importantes
+del principio y dictan en standar de comunoicacion entre el c/S
+6) puedan enviar codigo on demand: enviar script en codigo, pero es opcional
+
+Como definir si un sistema usa REST o no:
+1) la arquitectura cliente/servidor

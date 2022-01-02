@@ -1,0 +1,35 @@
+NODE:
+
+Es ambiente de ejecución, o runtime environment de js.
+Además de permitirnos ejecutar el programa, provee al programa de objetos
+API, y librerias correspondientes a cada entorno.
+
+en JS podemos identificar dos ambientes de ejecucion:
+1) el NAVEGADOR
+2) el SERVIDOR
+
+* En el NAVEGADOR se exponen APIs que nos permiten interactuar con el DOM, 
+el objeto window, el objeto navigator, acceso al local storage, etc.
+* Por otro lado NodeJS ofrece acceso al sistema, que nos permiten 
+manipular archivos, peticiones, conectar bases de datos, 
+
+O sea, NodeJS perimite que:
+1) JS se ejecute en un ambiente q no sea el navegador
+2) Ofrecer las herramientas para comunicarse con el sistema
+
+--------------------------------------------------------------------------
+
+EXPRESS:
+Es un framework de Desarrollo Web, pensado para ejecutarse en el 
+servidor.
+Tiene el código base para construir aplicaciones Web.
+Tiene:
+* motores de vistas para enviar el HTML de nuestra página.
+* analizadores de los datos q vienen con cada peticion.
+* manejo de sesiones
+* cockies, etc
+
+O sea, con Express haremos aplicaciones que se ejecutaran  con NodeJS.
+
+
+

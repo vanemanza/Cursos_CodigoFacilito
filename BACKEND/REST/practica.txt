@@ -1,0 +1,47 @@
+recurso: puede estar representado x uno o varios documentos, como html, 
+xml, json, etc
+EStan identificados x una URI (UNIFORM RESOURCE IDENTIFIER)
+las URI nos permiten identificar un recursos usando el equema URI
+las URL (uniform resource locator) o localizador uniforme de recursos, 
+son un tipo de URI en el que podemos identificar los siguientes elementos:
+
+x ej:
+1)
+https://codigofacilito.com/cursos/backend-profesional
+|	|		  |
+|	|		  |-<identificador unico - representado como html>
+|       |-<dominio>
+|
+|-<protocolo de red - permite acceder al recurso>
+
+2)
+https://codigofacilito.com/articulos.json
+|	|		  |
+|	|		  |-<recurso:articulos, representado x un obj json>
+|	|	
+|       |-<a traves del dominio: codigofacilito.com>
+|
+|-<se accede via el protoc http>
+
+
+las URI deben identificar recursos, pero nunca acciones:
+3)
+la siguiente no es una direccion rest, ya que uri esta declarando 
+una accion y no un recurso.
+http://codigofacilito.com/crearCurso < declara una accion>
+
+la version REST seria asi:
+POST htts://codigofacilito/cursos <la uri es una representacion del recurso /cursos>
+|
+|-<quien indica la accion es el verbo http>
+
+get: busqueda
+post
+patch
+post
+delete
+
+la mayoria de los frameworks usan rutas REST para las funciones de la app web 
+o sea q identifican recursos y q ejecutan una accion distinta dependiendo del 
+verbo http usado
+
