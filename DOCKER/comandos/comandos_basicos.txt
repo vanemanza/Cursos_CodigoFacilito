@@ -1,7 +1,26 @@
+$ docker
+- lista todos los comandos disponibles
+
+$ docker image
+- image es el comando q se usa para manejar a nuestras imagenes
+- el comando PULL nos decarga una imagen de un repositorio o de un registro (docker hub)
+-generar una imagen y correrla en un contenedor:
+$ docker image pull <nombre de la imagen>
+- este comando se conecta con docker hub e inicia la descarga
+$ docker image ls
+- vemos las imagenes descargadas
+
 $ docker container
 -para inspeccionar los contenedores, y nos lista todos los 
 comandos disponibles.
 
+$ docker container run
+- genera un nuevo contendor a partir de una imagen
+$ docker container run --help
+- vemos todas las opciones q podemos pasarle y la estructura:
+(Usage: docker container run [OPTIONS] IMAGE [COMMAND] [ARG...])
+$ docker container run <nombre imagen>
+- vemos el resultado
 $ docker container ls 
 - lista a los contenedores, si no hay ningun servicio corriendo
 dentro del mismo no se verá nada
