@@ -1,0 +1,38 @@
+$ docker container
+-para inspeccionar los contenedores, y nos lista todos los 
+comandos disponibles.
+
+$ docker container ls 
+- lista a los contenedores, si no hay ningun servicio corriendo
+dentro del mismo no se verá nada
+
+$ docker container ls --help
+- lista todas las opciones disponibles
+
+$ docker container ls -a
+- muestra todos los contenedores si estan corriendo o apagados
+
+$ docker container rm <id o nombre>
+- elimina el contenedor 
+
+$ docker container run <nombre de la imagen>
+- para ejecutar un contenedor
+- run consta de dos comandos:   - create : genera un nuevo contenedor
+                                - start : inicia el contenedor
+$ docker container create <imagen>
+- me devuelve el id unico q docker asigna al container 
+- con docker container ls -a veo los contenedores, y en status vemos
+Created y en CREATED el tiempo q hace q se creó 
+- una vez creado el contenedor lo iniciamos:
+$ docker container start <id o nombre>
+- si volvemos a ejecutar docker container ls -a veremos en 
+status q el contenedor ha sido detenido (Exited)
+
+SINTESIS:
+run: genera contenedor
+create: genera contenedor
+start: iniciarlo
+rm: eliminarlo
+stop : detenerlo
+
+
