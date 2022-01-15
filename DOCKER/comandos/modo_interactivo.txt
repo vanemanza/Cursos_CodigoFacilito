@@ -35,4 +35,12 @@ $ docker container --help -->   -i: mantiene a stdin abierta
                                 contenedor y agregando una terminal a la misma
 $ docker container run -it <imagen (ubuntu)>
 cuando damos enter vemos q estamos dentro de la instancia del contenedor                                
+- si chequeamos desde otra terminal, y ejecutamos docker container ls,
+veremos  q tenemos a ubuntu ejecutandose.
+Pero si damos exit y volvemos a consultar habremos salido delproceso.
+Para q esto no pase usamos -d, que ejecuta el contenedor en segundo plano
 
+$ docker container run -itd ubuntu
+nginx se esta ejecutando pero para ejecutarlo en segundo plano tambien podemos
+usar -d
+$ docker container run -d nginx
