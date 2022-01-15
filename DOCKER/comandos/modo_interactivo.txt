@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-1) descargo una image ( x ej Ubuntu)
-$ docker image pull <nombre imagen> (desde el docker hub)
-
-=======
 1) descargo una imagen ( x ej Ubuntu)
 $ docker image pull <nombre imagen> (desde el docker hub)
 
@@ -41,4 +36,3 @@ $ docker container --help -->   -i: mantiene a stdin abierta
 $ docker container run -it <imagen (ubuntu)>
 cuando damos enter vemos q estamos dentro de la instancia del contenedor                                
 
->>>>>>> 6257e90a25a6cbb6cda8a91660cf106ac1ea9af2
