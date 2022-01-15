@@ -1,2 +1,38 @@
-1) descargo una image ( x ej Ubuntu)
+1) descargo una imagen ( x ej Ubuntu)
 $ docker image pull <nombre imagen> (desde el docker hub)
+
+los tags nos permiten diferenciar entre diferentes versiones
+latest, es la ultima version soportada
+para elegir otra version:
+$ docker image pull <imagen>:<tag>
+
+2) inspeccionar las imagenes:
+$ docker image ls 
+
+repositorio tag id created size
+
+3) una vez q tenemos la imagen, corremos el contenedor
+$ docker container run <imagen>:<tag> 
+
+4) inspeccionamos los contenedores:
+$ docker container ls -a
+- si dentro del contenedor no estamos ejecutando ningun proceso, 
+el mismo se apaga automaticamente. (status: Exited)
+
+- algunas veces necesitamos ejecutar un servicio dentro de 
+un contenedor
+
+5) si descargamos (docker image pull nginx) y corremos (docker container run nginx) una imagen de Nginx x ejemplo, y abrimos una 
+nueva terminal, y ejecutamos ($ docker container ls) veremos q sigue ejecutandose, q está activo, porque internamente la imagen
+de nginx está ejecutando al binario de Nginx, por este contenedor 
+no se apaga automaticamente. (lo puedo apagar con ctrl+c)
+
+6) el MODO INTERACTIVO sirve para mantenerlo corriendo
+Es una forma de ejecutar una terminal dentro del contenedor
+$ docker container --help -->   -i: mantiene a stdin abierta
+                                -t: permite generar una nueva terminal
+                                o sea, estaríamos generando un proceso dentro del 
+                                contenedor y agregando una terminal a la misma
+$ docker container run -it <imagen (ubuntu)>
+cuando damos enter vemos q estamos dentro de la instancia del contenedor                                
+
