@@ -1,0 +1,49 @@
+ejecutar un contenedor con una imagen ( en este caso nginx)
+$ docker container run -d nginx
+si inspeccionamos los contenedores vemos q lo tenemos ejecutandose
+$ docker container ls
+para vel el contenido del container:
+1) acceder al local host-> curl localhost ( no veremos nada ya q el 
+servidor esta exponiendo un servicio, pero dentro del host no podemos acceder 
+al mismo)
+
+Para resolver este problema se usan los PUERTOS en docker.
+
+Los puertos nos permiten exponer servicios  desde el contenedor hacia 
+nuestro localhost, o sea hacen un mapeo del puerto q expone el contenedor
+hacia nuestra maquina local.
+
+Primero q nada, detener a todos los  contenedores 
+$ docker container stop id
+Luego eliminar todos los contenedores detenidos
+($ docker container prune)
+
+Usamos -p que nos permite publicar los  puertos del contenedor  a  nuestro host
+
+$ docker container run -d -p a:b <imagen> 
+                        |  |
+                        |  |_ recibe dos parametros: a(local):b(nginx)
+                        |
+                        |__ para ejecutarlo en segundo plano
+
+a: puerto a exponer dentro de nuestro host, queremos acceder al servicio de nginx a traves del puerto
+b: en donde se está ejecutando ese servicio ( x default nginx expone el servicio en el puerto 80)
+
+con docker container ls vemos al contenedor ejecutandose 
+y con curl localhost vemos la salida de nginx 
+$ curl localhost
+o
+$curl localhost:8080 8 x ejemplo
+
+PARA INSPECCIONAR Q PUERTO SE ESTA EXPONIENdO EN NUESTRO CONTENEDOR:
+$ docker container ls ( copio el id)
+$ docker container port <container id>  --> salida: 80/tcp -> 0.0.0.0.8080  
+                                                       |          |
+                                                       |          |_donde podemos acceder desde nuestra maquina local
+                                                       |
+                                                       |
+                                                       |__ puerto donde el cotenedo expone al servicio
+
+
+PARA DEJAR QUE DOCKER ASIGNE UN PUERTO ALEATORIO:
+$   docker container run -d -P a:b <imagen>   ---> cambiamos la p  minuscula x P mayuscula                                            
