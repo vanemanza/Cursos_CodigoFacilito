@@ -54,4 +54,10 @@ start: iniciarlo
 rm: eliminarlo
 stop : detenerlo
 
-
+DETENER UN CONTENEDOR:  stop/ prune
+$ docker ps ( reviso los containers y obtengo el id) o con $ docker container ls
+$ docker container stop <container id>
+o $ docker container ls -q -> me devuelve el id de cada uno de  los containers activos
+entonces para detenerlos a todos juntos->
+$  docker container stop $(docker container ls -q)
+$ docker container prune -> yes : remueve a todos los contenedores detenidos
