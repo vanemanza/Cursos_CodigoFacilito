@@ -4,7 +4,7 @@ dentro del contenedor.
 
 $ docker container attach <container id>
 nos encontramos dentro del contenedor y podemos  ejecutar cualquier comando
-pero si ejecutamos docker container ls vemosel container corriendopero 
+pero si ejecutamos docker container ls vemos el container corriendo pero 
 si  le damos exit se termina el proceso
 
 2) con EXEC 
@@ -20,13 +20,13 @@ $ docker container exec <container id> ls| grep a
 Pero si necesitamos estar dentro del contenedor y ejecutar comandos 
 dentro de la consola:
 $ docker container exec -it <container id> bash
-- entramos al contenedor y si inspeccionamos en otra terminarl vemos q el contenedor
+- entramos al contenedor y si inspeccionamos en otra terminal vemos q el contenedor
 sigue ejecutandose
 - y si damos exit y volvemos a inspeccionar, el contenedor sigue ejecutandose 
 
 
 TOP:
-Ahora puedo ver q procesos se estan ejecutando dentro de un contendero:
+Ahora puedo ver q procesos se estan ejecutando dentro de un contenedor:
 $ docker container ls (copio el id del contenedor q quiero ver) 
 $ docker container top <container id> 
 
