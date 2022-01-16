@@ -1,0 +1,30 @@
+Nos permite visualizar informacion que dirijamos a staout o stderr, dentro del contenedor.
+Es util para debuggear errores dentro de nuestros contenedores.
+
+Por ejemplo:
+- Ejecuto un contenedor, x ejemplo el de hola mundo, que lo unico que hace
+es imprimir un hola mundo mediante un script usando la instrucción print. 
+O sea imprime en la salida standar el hola mundo.
+En docker podemos ver la salida  usando  logs.
+
+$ docker run holamundo
+
+- Para verificarlo:
+$ docker container ls -a ( copio el id del contenedor )
+$ docker container logs <id container> -> obtengo la salida o  sea el print
+
+Otro ejemplo con mysql:
+
+1) descargo la imagen de mysql: 
+$ docker image pull mysql
+
+2) ejecutarla:
+$ docker container run -d mysql
+
+3) inspeccionamos:
+$ docker container ls -a
+vemos q el contenedor de mysql se ha apagado automaticamente.
+Para ver cual es el error usamos logs.
+
+$ docker container logs <id container> 
+(vemos q el error es xq faltaba especificar una psw para el usuario root)
