@@ -1,0 +1,33 @@
+Un commit es una forma de tomar a un contenedor con todos  sus recursos, y transformarlo en una imagen.
+
+Como? 
+1) Defino un contenedor usando una imagen, en este ejemplo una de Ubuntu
+
+$ docker container run -dit ubuntu 
+$ docker container ls ( para ver el id)
+
+2) Una vez q ya tenemos a nuestro nuevo contenedor ejecutandose, usaremos
+exec para poder ejecutar comandos:
+$ docker container exec -it <container id> bash 
+root@23375074:/# touch data.txt ( genero un nuevo archivo data)
+Podemos verificar q se creó con un ls
+Con exit salimos de bash.
+
+3) inspecciono el id del container ($ docker container ls)
+
+4) para ver la estructura del comando commit:
+$ docker container commit --help
+Crea una nueva imagen a partir de  los cambios en un contenedor.
+docker container commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]
+u
+$ docker container commit <id> <nuevo nombre> ( x ej ubuntu-file)
+
+5) si ahora vuelvo a inspeccionar mis imagenes veré la nueva imagen q creé 
+a partir del contenedor.
+$ docker image ls ( ubuntu-file)
+
+6) ahora si copio el nombre de mi nueva imagen puedo ejecutar un nuevo contendero 
+a partir de ella:
+$ docker container run -it ubuntu-file
+si inspeccionamos de nuevo con ls vemos q aparece el nuevo archivo q creeamos.
+
