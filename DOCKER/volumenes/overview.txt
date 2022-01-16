@@ -1,0 +1,67 @@
+Permiten compartir archivos de nuestro host al contenedor y viceversa.
+Tambien permiten compartir archivos entre un conjunto de contenedores.
+Almacenan información sencible,o sea q no deberiamos almacenar
+dentro del contenedor.
+
+Lo mas importante de los volumenes es la  persistencia de  datos
+
+CREANDO VOUMENES:
+$ docker volume 
+uso: docker  volume comando
+comandos:   create
+            inspect
+            ls
+            prune
+            rm
+
+En docker podemos usar multiples drivers para volumenes.
+
+El driver x default es 'local', almacena la informacion 
+directamente en el disco duro de nuestro host.
+
+Si necesitamos  extender la  funcionalidad, podemos instalar plugins
+para poder agregar volumenes ( ya  sea en digital ocean, en aws, etc)
+
+Crear:
+$ docker volume  create opciones volumen 
+                            |
+                            |_ -d : nombre del driver x default local 
+
+1) generar un nuevo volumen:
+$ docker volume create <nombre>
+2) listar los volumenes:
+$ docker volume ls
+3) inspeccionar:
+$ docker volume inspect <nombre>
+    Mountpoint es donde se aloja el volumen dentro de nuestra maquina local
+    Podemos hacer un ls hacia esa ruta: $ sudo ls <ruta>
+    Dentro de esa carpeta encontramos nuestro volumen
+4) una vez q tenemos nuestro volumen, montaremos el mismo dentro de una ruta en nuestro contenedor:
+    lo montaremos a una ruta /app
+    para eso-> $ docker container run -dit -v <nombre volumen generado>:<ruta  donde lo vamos a montar> <imagen>
+                $ docker container run -dit -v local:/app ubuntu
+    luego copiamos el id
+    y hacemos un execute:
+                $ docker exec -it <id del contenedor> bash (asi generamos una nueva terminal)            
+    dentro de bash si inspeccionamos con ls encontraremos a la nueva carpeta llamada app
+    con cd app entramos y creamos algunos archivos: touch a (etc b y c)
+    Ahora salimos del contenedor con exit
+    y lo eliminamos con el flag -f: $ docker container rm -f <container id>
+                                |
+                                |
+                                |_ ya q no se puede eliminar un contenedor q se esta ejecutando  
+
+5) volvemos a inspeccionar nuestro volumen:
+$ docker volume inspect local
+    volvemos a hacer un ls con sudo hacia la misma ruta:
+    $ sudo ls /var/lib/docker/volumes/local/_data
+    y  veremos los archivos a b y c q habiamos creado 
+
+6) nuevamente ejecutaremos un contenedor montando el volumen local hacia otra ruta:
+    $ docker container run -it -v local:/src ubuntu 
+    si hacemos un ls veremos el archivo src
+    hacemos un cd de esta carpeta y veremos de nuevo los archivos a b y c 
+
+
+generamos un nuevo volumen -> lo montamos hacia nuestro contenedor 
+
