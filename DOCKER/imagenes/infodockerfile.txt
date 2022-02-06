@@ -1,0 +1,41 @@
+Aquí definiremos a la  imagen base a utilizar y  a todas las instrucciones
+de nuestra imagen.
+
+1) generamos  un archivo llamado Dockerfile dentro de una ruta específica:
+
+$ nano Dockerfile
+
+Dentro usaremos directivas para definir el comportamiento de nuestra 
+imagen.
+(Las directivas se escriben en MAYUSCULAS)
+
+FROM ubuntu ( imagen base a utilizar)
+
+(si necesitamos una en especifico lo indico con el tag--> ubuntu:latest)
+
+RUN mkdir app
+
+Nos permite ejecutar comandos dentro de nuestro contenedor.
+Lo que haremos es generar una nueva carpeta con un nuevo archivo.
+
+RUN cd /app && touch  data.txt
+
+(con cd entro a app y genero un nuevo archivo llamado data)
+
+Guardamos el archivo  y  procedemos a generar nuestra imagen.
+
+Dentro de la carpeta donde se encuentra  el Dockerfile, ejecutaremos el 
+siguiente comando:
+
+docker image build -t ubuntu_file2 . 
+                    |   |          |---- el path donde se encuentra el dockefield  o . si estamos dentro de la carpeta
+                    |   |
+                    |   |---- el nombre q le asignamos nosotros
+                    |
+                    |---- nos permite nombrar  a nuestra imagen
+
+
+ejecutamos y la  salida muestra cada una de las  instrucciones q hemos definido.
+
+ahora ejecutaremos un contenedor con la imagen nueva
+
