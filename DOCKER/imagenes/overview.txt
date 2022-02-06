@@ -1,0 +1,19 @@
+Haciendo una analogía con POO, una imagen es como una clase a traves
+de la cual podemos instanciar a multiples contenedores.
+Detro de las imagenes tendriamos toda la informacion y  la configuracion 
+final q queremos q tenga un contenedor.
+
+Cuando trabajamos con imagenes, trabajaremos  con un archivo llamado DOCKERFILE, 
+que es el archivo donde definiremos a las instrucciones y configuraciones
+de nuestra imagen.
+
+Por ej: instalar Nginx, o culquier paquete , actualizar dependencias, etc.
+---------------------------------------------------
+| FROM ubuntu                                     |
+|                                                 |
+| RUN apt-get update && apt-get install  nginx -y |
+---------------------------------------------------
+
+La primera directiva es la mas importante, ya q será la imagen base que
+usaremos.
+

@@ -1,0 +1,13 @@
+Compartir un volumen con un conjunto de contenedores:
+
+Una vez q generamos nuestro volumen, generaremos dos contenedores:
+
+$ docker conrtainer run -it -v local:/app ubuntu
+
+en otra terminal definimos el volumen local en la ruta src:
+$ docker conrtainer run -it -v local:/app ubuntu
+
+hacemos un ls dentro de src y vemos nuestros archivos
+
+cualquier cambio q realice en cualquiera de los dos archivos, 
+ya sea app o src se veran reflejados en ambos archivos
